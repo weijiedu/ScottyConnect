@@ -1,0 +1,247 @@
+
+.fs-page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(196, 18, 48, 0.06) 0%, transparent 55%),
+    var(--bg-subtle);
+  color: var(--text-primary);
+}
+
+.fs-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--steel-gray);
+  box-shadow: var(--shadow-sm);
+}
+
+.fs-header-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.fs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  font-family: var(--sans);
+  color: var(--carnegie-red);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.fs-back:hover {
+  color: var(--carnegie-red-hover);
+}
+
+.fs-back svg {
+  width: 18px;
+  height: 18px;
+}
+
+.fs-content {
+  flex: 1;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.fs-title {
+  font-size: clamp(1.5rem, 3.5vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+  color: var(--black);
+}
+
+.fs-card {
+  background: var(--white);
+  border: 1px solid var(--steel-gray);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 28px 28px;
+}
+
+.fs-section {
+  margin-bottom: 28px;
+}
+
+.fs-section:last-child {
+  margin-bottom: 0;
+}
+
+.fs-section-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--iron-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--steel-gray);
+}
+
+.fs-info-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9375rem;
+  flex-wrap: wrap;
+}
+
+.fs-info-row:last-child {
+  margin-bottom: 0;
+}
+
+.fs-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.fs-value {
+  color: var(--iron-gray);
+}
+
+.fs-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fs-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fs-form-group label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.fs-form-group select,
+.fs-form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--steel-gray);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  background: var(--white);
+  box-sizing: border-box;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  appearance: auto;
+}
+
+.fs-form-group select:focus,
+.fs-form-group textarea:focus {
+  outline: none;
+  border-color: var(--carnegie-red);
+  box-shadow: 0 0 0 3px rgba(196, 18, 48, 0.1);
+}
+
+.fs-form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.fs-help-text {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--iron-gray);
+}
+
+.fs-submit-btn {
+  align-self: flex-start;
+  padding: 10px 24px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-family: var(--sans);
+  background: var(--carnegie-red);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.fs-submit-btn:hover:not(:disabled) {
+  background: var(--carnegie-red-hover);
+}
+
+.fs-submit-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.fs-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fs-error {
+  font-size: 0.9375rem;
+  color: #b91c1c;
+  margin: 0;
+}
+
+.fs-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.fs-state-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--black);
+}
+
+.fs-state-msg {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--iron-gray);
+  line-height: 1.55;
+}
+
+.fs-state-msg--error {
+  color: #b91c1c;
+}
+
+@media (max-width: 480px) {
+  .fs-header-inner {
+    padding: 12px 16px;
+  }
+
+  .fs-content {
+    padding: 24px 16px 40px;
+  }
+
+  .fs-card {
+    padding: 20px 18px;
+  }
+
+  .fs-submit-btn {
+    align-self: stretch;
+  }
+}

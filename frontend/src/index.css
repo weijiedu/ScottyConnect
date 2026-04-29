@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --carnegie-red: #C41230;
+  --carnegie-red-hover: #a30f28;
+  --carnegie-red-light: rgba(196, 18, 48, 0.08);
+  --black: #000000;
+  --iron-gray: #6D6E71;
+  --steel-gray: #E0E0E0;
+  --white: #FFFFFF;
+
+  --text-primary: #1a1a1a;
+  --text-secondary: #6D6E71;
+  --bg: #FFFFFF;
+  --bg-subtle: #F8F8F9;
+  --border: #E0E0E0;
+  --border-focus: #C41230;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --radius: 10px;
+  --radius-sm: 6px;
+
+  font: 16px/1.5 var(--sans);
+  color: var(--text-primary);
+  background: var(--bg-subtle);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+}
+
+#root {
+  min-height: 100svh;
+}

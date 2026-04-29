@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd frontend && npm install && npm ci --include=dev && npm run build",
+  "outputDirectory": "frontend/dist",
+  "rewrites": [
+    { "source": "/docs", "destination": "/api/index.py" },
+    { "source": "/openapi.json", "destination": "/api/index.py" },
+    { "source": "/api/(.*)", "destination": "/api/index.py" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

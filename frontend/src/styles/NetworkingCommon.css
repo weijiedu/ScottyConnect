@@ -1,0 +1,110 @@
+/* Networking Common Styles — Shared between Networking Hub and My Meetings */
+
+:root {
+  --status-pending-bg: #fef3c7;
+  --status-pending-color: #92400e;
+  --status-pending-border: #fcd34d;
+  
+  --status-accepted-bg: #e6f9ed;
+  --status-accepted-color: #1a7f37;
+  --status-accepted-border: #b4e6c4;
+  
+  --status-declined-bg: #fff1f0;
+  --status-declined-color: #cf222e;
+  --status-declined-border: #f7c5c5;
+  
+  --status-past-bg: #f0f0f1;
+  --status-past-color: #57606a;
+  --status-past-border: #d0d7de;
+}
+
+/* Unified Alert Box (Banner) */
+.networking-alertbox, .meetings-alertbox {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  min-width: 300px;
+  max-width: 420px;
+  border-radius: 12px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
+  z-index: 1400;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  animation: networkingCommonSlideIn 0.25s ease-out;
+}
+
+.networking-alertbox--success, .meetings-alertbox--success {
+  background: #ecfdf5;
+  color: #065f46;
+  border-color: #a7f3d0;
+}
+
+.networking-alertbox--error, .meetings-alertbox--error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.networking-alertbox-body, .meetings-alertbox-body {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.networking-alertbox-icon, .meetings-alertbox-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.networking-alertbox-close, .meetings-alertbox-close {
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+@keyframes networkingCommonSlideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Shared Status Pills */
+.mm-status-pending, .status-pending {
+  color: var(--status-pending-color);
+  background: var(--status-pending-bg);
+  border: 1px solid var(--status-pending-border);
+}
+
+.mm-status-accepted, .status-accepted {
+  color: var(--status-accepted-color);
+  background: var(--status-accepted-bg);
+  border: 1px solid var(--status-accepted-border);
+}
+
+.mm-status-declined, .status-declined {
+  color: var(--status-declined-color);
+  background: var(--status-declined-bg);
+  border: 1px solid var(--status-declined-border);
+}
+
+.mm-status-cancelled, .status-cancelled {
+  color: var(--status-past-color);
+  background: var(--status-past-bg);
+  border: 1px solid var(--status-past-border);
+}
